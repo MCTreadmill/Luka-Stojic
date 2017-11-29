@@ -1,7 +1,10 @@
 package com.example.androiddevelopment.tourguide.activities;
 
+import android.app.AlertDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -16,6 +19,7 @@ import android.widget.RelativeLayout;
 import com.example.androiddevelopment.tourguide.R;
 import com.example.androiddevelopment.tourguide.adapters.DrawerAdapter;
 import com.example.androiddevelopment.tourguide.db.ORMLightHelper;
+import com.example.androiddevelopment.tourguide.dialogs.AboutDialog;
 import com.example.androiddevelopment.tourguide.model.NavigationItem;
 import com.j256.ormlite.android.apptools.OpenHelperManager;
 
@@ -37,6 +41,8 @@ public class SightActivity extends AppCompatActivity {
 
     private ORMLightHelper databaseHelper;
 
+    private SharedPreferences prefs;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -51,11 +57,13 @@ public class SightActivity extends AppCompatActivity {
             setSupportActionBar(toolbar);
         }
 
+        prefs = PreferenceManager.getDefaultSharedPreferences(this);
+
         // Manages NavigationDrawer
 
         // Populates a list of NavigationDrawer items
-        //drawerItems.add(new NavigationItem("Settings", "Adjust some Preferences", R.drawable.ic_settings));
-        //drawerItems.add(new NavigationItem("About", "Learn about the author", R.drawable.ic_about));
+        drawerItems.add(new NavigationItem("Settings"));
+        drawerItems.add(new NavigationItem("About"));
 
         drawerTitle = getTitle();
         drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
@@ -69,13 +77,13 @@ public class SightActivity extends AppCompatActivity {
         drawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if (position == 0) {/*
-                    Intent settings = new Intent(ActorActivity.this, PreferenceClass.class);
-                    startActivity(settings);*/
+                if (position == 0) {
+                    Intent settings = new Intent(SightActivity.this, SettingsActivity.class);
+                    startActivity(settings);
                 }
-                if (position == 1) {/*
-                    android.support.v7.app.AlertDialog alertDialog = new AboutDialog(ActorActivity.this).prepareDialog();
-                    alertDialog.show();*/
+                if (position == 1) {
+                    AlertDialog alertDialog = new AboutDialog(SightActivity.this).prepareDialog();
+                    alertDialog.show();
                 }
             }
         });
