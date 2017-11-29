@@ -13,4 +13,6 @@
     <string name="worktime">Worktime</string>
     <string name="price">Price</string>
     <string name="comment">Comment</string>
+    <string name="edit_sight">Edit Sight</string>
+    <string name="delete_sight">Delete Sight</string>
 </resources>

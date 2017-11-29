@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.RatingBar;
@@ -75,9 +76,11 @@ public class DetailActivity extends AppCompatActivity {
 
     }
 
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.sight_menu, menu);
+        getMenuInflater().inflate(R.menu.detail_menu, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -88,6 +91,7 @@ public class DetailActivity extends AppCompatActivity {
         }
         return databaseHelper;
     }
+
 
     @Override
     protected void onDestroy() {
@@ -120,4 +124,6 @@ public class DetailActivity extends AppCompatActivity {
             }
         }
     }
+
+
 }
