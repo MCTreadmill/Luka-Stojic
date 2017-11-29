@@ -1,6 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_marginStart="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginRight="10dp">
+
+
+
+    <TextView
+        android:id="@+id/tv_dialog_sight_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add_a_sight"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:gravity="center_horizontal"
+        android:paddingTop="10dp"/>
+
+    <EditText
+        android:id="@+id/et_dialog_sight_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/name"
+        android:paddingTop="5dp"/>
+
+    <EditText
+        android:id="@+id/et_dialog_sight_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/description"
+        android:paddingTop="5dp"/>
+
+
+    <EditText
+        android:id="@+id/et_dialog_sight_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/address"
+        android:paddingTop="5dp"/>
+
+    <EditText
+        android:id="@+id/et_dialog_sight_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/phone"
+        android:paddingTop="5dp"
+        android:inputType="phone"/>
+
+    <EditText
+        android:id="@+id/et_dialog_sight_website"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/website"
+        android:paddingTop="5dp"/>
+
+    <EditText
+        android:id="@+id/et_dialog_sight_worktime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/worktime"
+        android:paddingTop="5dp"/>
+
+    <EditText
+        android:id="@+id/et_dialog_sight_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/price"
+        android:paddingTop="5dp"
+        android:inputType="numberDecimal"/>
+
+    <EditText
+        android:id="@+id/et_dialog_sight_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/comment"
+        android:paddingTop="5dp"/>
+
+    <Button
+        android:id="@+id/btn_dialog_sight_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add"
+        android:paddingTop="5dp"/>
 
 </LinearLayout>

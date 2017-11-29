@@ -45,7 +45,7 @@ public class Sight {
     private String mWebsite;
 
     @DatabaseField(columnName = FIELD_NAME_WORKTIME)
-    private int mWorktime;
+    private String mWorktime;
 
     @DatabaseField(columnName = FIELD_NAME_PRICE)
     private float mPrice;
@@ -113,11 +113,11 @@ public class Sight {
         this.mWebsite = mWebsite;
     }
 
-    public int getmWorktime() {
+    public String getmWorktime() {
         return mWorktime;
     }
 
-    public void setmWorktime(int mWorktime) {
+    public void setmWorktime(String mWorktime) {
         this.mWorktime = mWorktime;
     }
 
