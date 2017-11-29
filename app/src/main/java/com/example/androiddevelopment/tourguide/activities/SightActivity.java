@@ -150,16 +150,28 @@ public class SightActivity extends AppCompatActivity {
                 final Dialog dialog = new Dialog(this);
                 dialog.setContentView(R.layout.dialog_add_sight);
 
-                Button add = (Button) dialog.findViewById(R.id.btn_dialog_sight_add);
+                final Button add = (Button) dialog.findViewById(R.id.btn_dialog_sight_add);
                 add.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         EditText name = (EditText) dialog.findViewById(R.id.et_dialog_sight_name);
                         EditText description = (EditText) dialog.findViewById(R.id.et_dialog_sight_description);
+                        EditText address = (EditText) dialog.findViewById(R.id.et_dialog_sight_address);
+                        EditText phone = (EditText) dialog.findViewById(R.id.et_dialog_sight_phone);
+                        EditText website = (EditText) dialog.findViewById(R.id.et_dialog_sight_website);
+                        EditText worktime = (EditText) dialog.findViewById(R.id.et_dialog_sight_worktime);
+                        EditText price = (EditText) dialog.findViewById(R.id.et_dialog_sight_price);
+                        EditText comment = (EditText) dialog.findViewById(R.id.et_dialog_sight_comment);
 
                         Sight sight = new Sight();
                         sight.setmName(name.getText().toString());
                         sight.setmDescription(description.getText().toString());
+                        sight.setmAdress(address.getText().toString());
+                        sight.setmPhone(phone.getText().toString());
+                        sight.setmWebsite(website.getText().toString());
+                        sight.setmWorktime(worktime.getText().toString());
+                        sight.setmPrice(price.getText().toString());
+                        sight.setmComment(comment.getText().toString());
 
                         try {
                             getDatabaseHelper().getSightDao().create(sight);

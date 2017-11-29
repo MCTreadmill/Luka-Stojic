@@ -39,7 +39,7 @@ public class Sight {
     private String mAdress;
 
     @DatabaseField(columnName = FIELD_NAME_PHONE)
-    private int mPhone;
+    private String mPhone;
 
     @DatabaseField(columnName = FIELD_NAME_WEBSITE)
     private String mWebsite;
@@ -48,7 +48,7 @@ public class Sight {
     private String mWorktime;
 
     @DatabaseField(columnName = FIELD_NAME_PRICE)
-    private float mPrice;
+    private String mPrice;
     
     @DatabaseField(columnName = FIELD_NAME_COMMENT)
     private String mComment;
@@ -97,11 +97,11 @@ public class Sight {
         this.mAdress = mAdress;
     }
 
-    public int getmPhone() {
+    public String getmPhone() {
         return mPhone;
     }
 
-    public void setmPhone(int mPhone) {
+    public void setmPhone(String mPhone) {
         this.mPhone = mPhone;
     }
 
@@ -121,11 +121,11 @@ public class Sight {
         this.mWorktime = mWorktime;
     }
 
-    public float getmPrice() {
+    public String getmPrice() {
         return mPrice;
     }
 
-    public void setmPrice(float mPrice) {
+    public void setmPrice(String mPrice) {
         this.mPrice = mPrice;
     }
 
